@@ -1,0 +1,57 @@
+
+
+Extent Reports:
+===============
+1. add the dependencies to the POM.Xml
+2. create testNg class-- with pass,fail tc's
+3. create the XML file
+4. class -- for extent report genration
+5. in XML file -- tage the extent report using Listeners
+
+
+Excel Read
+Headless Browser
+Framework
+Database Read
+Properties file Read
+
+Headless Browser:-- / Ghost run / HTMLUnitDriver:
+=================
+-- no browser launched --- faster
+good performance.
+- used in Real time execution
+
+
+Properties file Read:
+=============
+(.properties)
+Key - value pair
+
+1. create a properties
+2. Java class --- Read prop file.
+
+ Hint --- put() , store(fot ,"comment..")
+ 
+Excel Read:
+=============
+downlad the libarray for excel---- add to working project
+
+Apache poi jars:
+
+1. create a Excel file
+2. Java class --- Read excel file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
