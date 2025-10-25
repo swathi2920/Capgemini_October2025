@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="149.573" tests="20" skipped="0" failures="4" errors="0" timestamp="2025-07-29T19:17:50.874439100Z">
+<testcase classname="State Pass Application" name="When the user enters valid travel details for state pass &lt;Index&gt; - #1.1: When the user enters valid travel details for state pass 1" time="8.004">
+<system-out><![CDATA[
+Given the user is on the State Pass page....................................passed
+When the user enters "Soham", "Maharashtra", "Female", "sumap@mail.com", "789", "012", "3456", "123456789012", "Wedding", "Bus", "Need pass urgently","26/04/2021".passed
+And the user clicks the Submit button.......................................passed
+Then the user should see the submitted details in the confirmation view.....passed
+]]></system-out>
+</testcase>
+<testcase classname="State Pass Application" name="When the user enters valid travel details for state pass &lt;Index&gt; - #1.2: When the user enters valid travel details for state pass 2" time="7.25">
+<system-out><![CDATA[
+Given the user is on the State Pass page....................................passed
+When the user enters "soham", "Goa", "Female", "sumap@mail.com", "998", "877", "6655", "234567890123", "Vaccination", "Train", "Need healthcheckup","12/02/2022".passed
+And the user clicks the Submit button.......................................passed
+Then the user should see the submitted details in the confirmation view.....passed
+]]></system-out>
+</testcase>
+<testcase classname="State Pass Application" name="When the user enters valid travel details for state pass &lt;Index&gt; - #1.3: When the user enters valid travel details for state pass 3" time="7.038">
+<system-out><![CDATA[
+Given the user is on the State Pass page....................................passed
+When the user enters "soham", "Kerala", "Male", "ssumap@mail.com", "887", "766", "5544", "345678901234", "Interview", "Car", "Job interview letter","01/11/2020".passed
+And the user clicks the Submit button.......................................passed
+Then the user should see the submitted details in the confirmation view.....passed
+]]></system-out>
+</testcase>
+<testcase classname="State Pass Application" name="When the user enters valid travel details for state pass &lt;Index&gt; - #1.4: When the user enters valid travel details for state pass 4" time="7.013">
+<system-out><![CDATA[
+Given the user is on the State Pass page....................................passed
+When the user enters "soham", "Gujarat", "Female", "saman@mail.com", "776", "655", "4433", "456789012345", "Funeral", "Bus", "","22/06/2021".passed
+And the user clicks the Submit button.......................................passed
+Then the user should see the submitted details in the confirmation view.....passed
+]]></system-out>
+</testcase>
+<testcase classname="State Pass Application" name="When the user enters valid travel details for state pass &lt;Index&gt; - #1.5: When the user enters valid travel details for state pass 5" time="6.996">
+<system-out><![CDATA[
+Given the user is on the State Pass page....................................passed
+When the user enters "soham", "Delhi", "Female", "sohamumap@mail.com", "766", "544", "3322", "567890123456", "Exams", "Train", "Final semester exams","05/11/2022".passed
+And the user clicks the Submit button.......................................passed
+Then the user should see the submitted details in the confirmation view.....passed
+]]></system-out>
+</testcase>
+<testcase classname="State Pass Application" name="When the user enters valid travel details for state pass &lt;Index&gt; - #1.6: When the user enters valid travel details for state pass 6" time="7.535">
+<system-out><![CDATA[
+Given the user is on the State Pass page....................................passed
+When the user enters "Soham", "Punjab", "Others", "sssumap@mail.com", "912", "345", "6789", "678901234567", "Wedding", "Car", "Wedding is tomorrow","12/09/2023".passed
+And the user clicks the Submit button.......................................passed
+Then the user should see the submitted details in the confirmation view.....passed
+]]></system-out>
+</testcase>
+<testcase classname="State Pass Application" name="When the user submits without any input" time="6.027">
+<system-out><![CDATA[
+Given the user is on the State Pass page....................................passed
+When the user clicks the Submit button without filling the form.............passed
+Then the user should see a validation message...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="State Pass Application" name="When the user submits with invalid Email" time="10.639">
+<failure type="java.lang.AssertionError" message="Email validation message not displayed">
+<![CDATA[java.lang.AssertionError: Email validation message not displayed
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.pandemic.cucumber.StepDefination.StatePassFormStepDefinitions.user_should_see_email_validation_error(StatePassFormStepDefinitions.java:85)
+	at ✽.the user should see an email validation error(file:///C:/Users/ASUS/Downloads/Pandemic_Sprint2/Pandemic_Sprint2/src/test/java/com/pandemic/cucumber/Features/StateEPassForm.feature:28)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is on the State Pass page....................................passed
+When the user enters "Raju", "Goa", "Male", "231", "567", "876", "987", "234567888", "Wedding", "Bus", "Need to attend wedding","27/01/2024".passed
+And the user enters Invalid Email from Excel File...........................passed
+And the user clicks the Submit button.......................................passed
+Then the user should see an email validation error..........................failed
+]]></system-out>
+</testcase>
+<testcase classname="State Pass Application" name="Submission with Invalid Mobile Number Format &quot;&lt;MobileType&gt;&quot; - #1.1" time="10.489">
+<failure type="java.lang.AssertionError" message="Mobile validation message was not displayed">
+<![CDATA[java.lang.AssertionError: Mobile validation message was not displayed
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.pandemic.cucumber.StepDefination.StatePassFormStepDefinitions.the_user_should_see_a_clear_validation_error_message_for_the_mobile_field(StatePassFormStepDefinitions.java:109)
+	at ✽.the user should see a clear validation error message for the mobile field(file:///C:/Users/ASUS/Downloads/Pandemic_Sprint2/Pandemic_Sprint2/src/test/java/com/pandemic/cucumber/Features/StateEPassForm.feature:38)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is on the State Pass page....................................passed
+When the user enters valid personal and travel details: "Hamso", "Maharashtra", "Male", "Hamso@mail.com", "<InvalidMobile1>", "<InvalidMobile2>", "<InvalidMobile3>", "123456789012", "Wedding", "Bus", "Need pass urgently", "26/04/2021".passed
+And the user clicks the Submit button.......................................passed
+Then the user should see a clear validation error message for the mobile field.failed
+]]></system-out>
+</testcase>
+<testcase classname="State Pass Application" name="Submission with Invalid Mobile Number Format &quot;&lt;MobileType&gt;&quot; - #1.2" time="10.428">
+<failure type="java.lang.AssertionError" message="Mobile validation message was not displayed">
+<![CDATA[java.lang.AssertionError: Mobile validation message was not displayed
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.pandemic.cucumber.StepDefination.StatePassFormStepDefinitions.the_user_should_see_a_clear_validation_error_message_for_the_mobile_field(StatePassFormStepDefinitions.java:109)
+	at ✽.the user should see a clear validation error message for the mobile field(file:///C:/Users/ASUS/Downloads/Pandemic_Sprint2/Pandemic_Sprint2/src/test/java/com/pandemic/cucumber/Features/StateEPassForm.feature:38)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is on the State Pass page....................................passed
+When the user enters valid personal and travel details: "Henry", "Goa", "Female", "henry@mail.com", "<InvalidMobile1>", "<InvalidMobile2>", "<InvalidMobile3>", "234567890123", "Vaccination", "Train", "Need healthcheckup", "12/02/2022".passed
+And the user clicks the Submit button.......................................passed
+Then the user should see a clear validation error message for the mobile field.failed
+]]></system-out>
+</testcase>
+<testcase classname="State Pass Application" name="Submission with Invalid Mobile Number Format &quot;&lt;MobileType&gt;&quot; - #1.3" time="10.529">
+<failure type="java.lang.AssertionError" message="Mobile validation message was not displayed">
+<![CDATA[java.lang.AssertionError: Mobile validation message was not displayed
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.pandemic.cucumber.StepDefination.StatePassFormStepDefinitions.the_user_should_see_a_clear_validation_error_message_for_the_mobile_field(StatePassFormStepDefinitions.java:109)
+	at ✽.the user should see a clear validation error message for the mobile field(file:///C:/Users/ASUS/Downloads/Pandemic_Sprint2/Pandemic_Sprint2/src/test/java/com/pandemic/cucumber/Features/StateEPassForm.feature:38)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is on the State Pass page....................................passed
+When the user enters valid personal and travel details: "sohamm", "Goa", "Female", "sohamm@mail.com", "<InvalidMobile1>", "<InvalidMobile2>", "<InvalidMobile3>", "234567890123", "Vaccination", "Train", "Need healthcheckup", "13/02/2022".passed
+And the user clicks the Submit button.......................................passed
+Then the user should see a clear validation error message for the mobile field.failed
+]]></system-out>
+</testcase>
+<testcase classname="Virus Test Form Submission" name="Submit form with all valid inputs &lt;Index&gt; - #1.1: Submit form with all valid inputs 1" time="6.225">
+<system-out><![CDATA[
+Given the user is on the Virus Test page....................................passed
+When the user fills the form with Age60: "Yes", Age10: "No", Living: "Alone", Contact: "Yes", and Symptoms: "Persistent cough".passed
+And clicks on submit........................................................passed
+Then the resultant message should be displayed..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Virus Test Form Submission" name="Submit form with all valid inputs &lt;Index&gt; - #1.2: Submit form with all valid inputs 2" time="6.175">
+<system-out><![CDATA[
+Given the user is on the Virus Test page....................................passed
+When the user fills the form with Age60: "No", Age10: "Yes", Living: "Family", Contact: "No", and Symptoms: "Feeling tired or week".passed
+And clicks on submit........................................................passed
+Then the resultant message should be displayed..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Virus Test Form Submission" name="Submit form with all valid inputs &lt;Index&gt; - #1.3: Submit form with all valid inputs 3" time="6.275">
+<system-out><![CDATA[
+Given the user is on the Virus Test page....................................passed
+When the user fills the form with Age60: "Yes", Age10: "No", Living: "Alone", Contact: "Yes", and Symptoms: "Runny nose".passed
+And clicks on submit........................................................passed
+Then the resultant message should be displayed..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Virus Test Form Submission" name="Submit form with all valid inputs &lt;Index&gt; - #1.4: Submit form with all valid inputs 4" time="6.151">
+<system-out><![CDATA[
+Given the user is on the Virus Test page....................................passed
+When the user fills the form with Age60: "No", Age10: "No", Living: "Family", Contact: "Yes", and Symptoms: "Head ache".passed
+And clicks on submit........................................................passed
+Then the resultant message should be displayed..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Virus Test Form Submission" name="Submit form with all valid inputs &lt;Index&gt; - #1.5: Submit form with all valid inputs 5" time="7.044">
+<system-out><![CDATA[
+Given the user is on the Virus Test page....................................passed
+When the user fills the form with Age60: "Yes", Age10: "No", Living: "Alone", Contact: "No", and Symptoms: "Loss of taste or smell".passed
+And clicks on submit........................................................passed
+Then the resultant message should be displayed..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Virus Test Form Submission" name="Submit form with all valid inputs &lt;Index&gt; - #1.6: Submit form with all valid inputs 6" time="6.32">
+<system-out><![CDATA[
+Given the user is on the Virus Test page....................................passed
+When the user fills the form with Age60: "No", Age10: "No", Living: "Family", Contact: "Yes", and Symptoms: "Feeling tired or week,Head ache".passed
+And clicks on submit........................................................passed
+Then the resultant message should be displayed..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Virus Test Form Submission" name="Submit form with all valid inputs &lt;Index&gt; - #1.7: Submit form with all valid inputs 7" time="6.383">
+<system-out><![CDATA[
+Given the user is on the Virus Test page....................................passed
+When the user fills the form with Age60: "Yes", Age10: "Yes", Living: "Alone", Contact: "No", and Symptoms: "Persistent cough,Loss of taste or smell".passed
+And clicks on submit........................................................passed
+Then the resultant message should be displayed..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Virus Test Form Submission" name="Submit form with all valid inputs &lt;Index&gt; - #1.8: Submit form with all valid inputs 8" time="6.136">
+<system-out><![CDATA[
+Given the user is on the Virus Test page....................................passed
+When the user fills the form with Age60: "No", Age10: "No", Living: "Family", Contact: "No", and Symptoms: "".passed
+And clicks on submit........................................................passed
+Then the resultant message should be displayed..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Virus Test Form Submission" name="Submit form with no input" time="6.152">
+<system-out><![CDATA[
+Given the user is on the Virus Test page....................................passed
+When the user clicks on submit..............................................passed
+Then appropriate validation errors should be displayed......................passed
+]]></system-out>
+</testcase>
+</testsuite>

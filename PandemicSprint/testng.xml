@@ -1,0 +1,7 @@
+<suite name="Pandemic Suite">
+  <test name="Pandemic Cucumber Tests">
+    <classes>
+      <class name="com.pandemiccucumber.Runners.PandemicRunner"/>
+    </classes>
+  </test>
+</suite>
